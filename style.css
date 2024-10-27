@@ -1,0 +1,932 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins";
+}
+
+
+/* SCROLLBAR COLOR */
+
+::-webkit-scrollbar{
+    width: 12px;
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(#d400fa,#ff00c5,#ffa83e);
+    border-radius: 25px;
+}
+
+
+/* NAVBAR SECTION */
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 2rem;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 1000;
+    gap: 2rem;
+    background-color: #051937;
+    border-radius: 3rem;
+    padding: 0.5rem 2rem;
+}
+
+.logo{
+    font-size: 2.3rem;
+    font-weight: 900;
+    background-image: linear-gradient(to right, #d400fa, #ff00c5, #ff0097, #ff3d73, #ff655c, #ff7b4f, #ff9245, #ffa83e, #ffbb32, #ffd023);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.3s ease-in-out;
+}
+
+.logo:hover{
+    transform: scale(1.2);
+}
+
+.navLinks{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.navLinks a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.navLinks a:hover,
+.current a{
+    background-image: linear-gradient(to right, #d400fa, #ff00c5, #ff0097, #ff3d73, #ff655c, #ff7b4f, #ff9245, #ffa83e, #ffbb32, #ffd023);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+}
+
+li a{
+    position: relative;
+    font-weight: 300;
+    color: white;
+}
+
+#hamburgerMenu{
+    font-size: 2rem;
+    display: none;
+}
+
+/* ABOUT ME SECTION */
+
+.aboutMe{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 250px 0px 250px;
+    height: 90vh;
+    width: 100%;
+}
+
+.aboutMeImg img{
+    height: 450px;
+}
+
+.aboutMe .aboutMeImg{
+    animation: rotateAnimation 3s ease-in-out;
+}
+
+@keyframes rotateAnimation{
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.aboutMeContent{
+    text-align: center;
+    max-width: 1400px;
+}
+
+.aboutMeContent .hello{
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.aboutMeContent .name{
+    font-size: 3.3rem;
+    font-weight: 600;
+}
+
+.aboutMeContent .work{
+    letter-spacing: 10px;
+    font-size: 35px;
+    font-weight: 400;
+    text-transform: uppercase;
+    background-image: linear-gradient(to right, #d400fa, #ff00c5, #ff0097, #ff3d73, #ff655c, #ff7b4f, #ff9245, #ffa83e, #ffbb32, #ffd023);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.work:hover{
+    transform: scale(1.1);
+    transition: transform 0.5s ease;
+    cursor: pointer;
+}
+
+button{
+    padding: 10px 15px;
+    border-radius: 20px;
+    margin-right: 20px;
+    margin-top: 15px;
+    background-color: white;
+    border: 2px solid black;
+    font-weight: 800px;
+    font-size: 18px;
+}
+
+.btnInstagram:hover{
+    transform: scale(1.2);
+    transition: transform 0.5s ease;
+}
+
+.btnContact:hover{
+    transform: scale(1.2);
+    transition: transform 0.5s ease;
+}
+
+.btn a{
+    text-decoration: none;
+    color: black;
+}
+
+.aboutMeContent .cit{
+    max-width: 600px;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.5rem;
+    padding-bottom: 30px;
+    padding-top: 10px;
+}
+
+/* SKILLS SECTION */
+
+.titleSkills{
+    text-align: center;
+    margin: 0px auto;
+    max-width: 1400px;
+    font-size: 65px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+    padding-top: 90px;
+}
+
+.skills{
+    margin: 0px auto;
+    height: 100vh;
+    padding: 0 6%;
+}
+
+.skillsInfo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.skillsGrid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.gridCard{
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: center;
+    text-align: justify;
+    cursor: pointer;
+    transition: 0.2 ease-in-out;
+}
+
+.gridCard:hover{
+    transform: scale(1.1);
+    transition: transform 0.7s ease;
+    background-color: #051937;
+    color: white;
+}
+
+.gridCard h2{
+    background-image: linear-gradient(to right, #d400fa, #ff00c5, #ff0097, #ff3d73, #ff655c, #ff7b4f, #ff9245);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 5px 0px;
+}
+
+.skills img{
+    width: 400px;
+    height: 400px;
+}
+
+.skillsGrid p{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+/* PORTFOLIO SECTION */
+
+.titlePortfolio{
+    text-align: center;
+    margin: 0px auto;
+    font-size: 65px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-top: 40px;
+    min-width: 500px;
+    
+}
+
+.gallery{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+    padding: 0px 7%;
+    padding-top: 50px;
+}
+
+.gallery .card{
+    position: relative;
+    max-width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.card .imgBox{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.card .imgBox img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: opacity 0.4s;
+    background-color: white;
+}
+
+.card:hover .imgBox img{
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+.card .imgText{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card .imgText p{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.imgText, .imgText p{
+    padding: 20px 10%;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s linear,
+                padding 0.3s linear;
+}
+
+.card:hover .imgText, .card:hover .imgText p{
+    opacity: 1;
+    padding: 8px 10%;
+}
+
+.card .imgBox #borderRadius1{
+    border-radius: 70px 0px 0px 0px;
+}
+
+.card .imgBox #borderRadius2{
+    border-radius: 0px 70px 0px 0px;
+}
+
+.card .imgBox #borderRadius3{
+    border-radius: 0px 0px 0px 70px;
+}
+
+.card .imgBox #borderRadius4{
+    border-radius: 0px 0px 70px 0px;
+}
+
+
+/* CONTACT SECTION */
+
+.contact{
+    padding: 90px 0px 50px 0px;
+}
+
+.contactTitle{
+    text-align: center;
+    font-size: 65px;
+    text-transform: uppercase;
+}
+
+.contactContent{
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px auto;
+    padding: 150px 0px 50px 0px;
+}
+
+.contactContent .instagramContact{
+    border: 2px solid black;
+    padding: 20px;
+    border-radius: 30px;
+    font-size: 21px;
+    letter-spacing: 3px;
+}
+
+.contactContent .whatsappContact{
+    border: 2px solid black;
+    padding: 20px;
+    border-radius: 30px;
+    font-size: 21px;
+    letter-spacing: 3px;
+}
+
+.contactContent .mailContact{
+    border: 2px solid black;
+    padding: 20px;
+    border-radius: 30px;
+    font-size: 21px;
+    letter-spacing: 3px;
+}
+
+.contactContent a{
+    text-decoration: none;
+    background-image: linear-gradient(to right, #d400fa, #ff00c5, #ff0097, #ff3d73, #ff655c, #ff7b4f, #ff9245);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.instagramContact:hover{
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+    background-color: #051937;
+}
+
+.whatsappContact:hover{
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+    background-color: #051937;
+}
+
+.mailContact:hover{
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+    background-color: #051937;
+}
+
+/* FOOTER SECTION */
+
+.footer{
+    padding: 50px 0px 50px 0px;
+}
+
+.footerContent ul{
+    display: flex;
+    justify-content: center;
+}
+
+.footerContent a{
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+}
+
+.footerContent li{
+    list-style: none;
+    font-size: 19px;
+    margin: 0px 10px 0px 10px;
+    letter-spacing: 9px;
+}
+
+.footerContent li:hover{
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+
+.copyright{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-top: 10px;
+}
+
+/* RESPONSIVE SECTION */
+
+
+@media only screen and (max-width: 768px) {
+
+    header{
+        background: rgb(5, 25, 55, 0);
+    }
+
+    header #hamburgerMenu{
+        display: block;
+        width: 70px;
+        height: 70px;
+    }
+
+    .navLinks{
+        position: absolute;
+        top: 100%;
+        margin-top: 0.5rem;
+        min-width: fit-content;
+        padding: 1rem;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background: rgb(5, 25, 55, 0.6);
+        border-radius: 3rem;
+        display: none;
+    }
+
+    .navLinks a:hover,
+    .current a {
+        text-transform: none;
+    }
+
+    .navLinks li{
+        margin-top: 1.5rem;
+        padding: 1rem;
+    }
+
+    .navLinks.active{
+        display: block;
+    }
+
+    header{
+        padding: 1rem 1rem;
+        gap: 1rem;
+    }
+
+    header .logo{
+        display: none;
+    }
+
+    .aboutMe .aboutMeImg{
+        animation: rotateAnimation 4s ease-in-out;
+    }
+
+    .aboutMe {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 8%;
+        min-width: 500px;
+        min-height: 900px;
+    }
+
+    .aboutMeImg img{
+        max-height: 450px;
+    }
+
+    .aboutMeImg {
+        margin-bottom: -50px;
+    }
+
+    .aboutMeContent{
+        max-width: 500px;
+    }
+
+    .aboutMeContent .hello{
+        margin-top: 80px;
+    }
+
+    .aboutMeContent .name{
+        font-size: 50px;
+        margin: 15px 0px 15px 0px;
+    }
+
+    .aboutMeContent .work{
+        font-size: 2rem;
+        margin-bottom: 20px;
+        white-space: nowrap;
+    }
+
+    .work:hover{
+        transform: none;
+    }
+
+    .aboutMeContent .cit{
+        font-size: 21px;
+    }
+
+    .skills{
+        height: auto;
+        margin-top: -60px;
+    }
+
+    .titleSkills{
+        min-width: 500px;
+    }
+    
+    .skillsInfo{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        min-width: 450px;
+    }
+
+    .skillsGrid{
+        grid-template-columns: repeat(1,1fr);
+        margin-top: -21px;
+        font-size: 21px;
+    }
+
+    .skillsGrid p{
+        font-size: 21px;
+    }
+
+    .titlePortfolio{
+        font-size: 51px;
+    }
+
+    .gallery{
+        grid-template-columns: repeat(1,1fr);
+        gap: 30px;
+    }
+
+    .card .imgBox img{
+        height: 440px;
+        width: 440px;
+        border-radius: 50%;
+        margin: 0px auto;
+    }
+
+    .card:hover .imgBox img{
+        opacity: 1;
+    }
+    
+    .card .imgText p{
+        font-size: 0px;
+    }
+    
+    .card .imgBox #borderRadius1{
+        border-radius: 50%;
+    }
+
+    .card .imgBox #borderRadius2{
+        border-radius: 50%;
+    }
+
+    .card .imgBox #borderRadius3{
+        border-radius: 50%;
+    }
+
+    .card .imgBox #borderRadius4{
+        border-radius: 50%;
+    }
+
+    .contactTitle{
+        white-space: nowrap;
+        font-size: 45px;
+        min-width: 500px;
+    }
+
+    .contactContent{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: -70px;
+        min-width: 500px;
+    }
+
+    .contactContent .mailContact{
+        margin: 70px 0px 70px 0px;
+    }
+
+    .footer{
+        min-width: 500px;
+    }
+
+    .footerContent a{
+        font-size: 17px;
+        letter-spacing: 6px;
+    }
+
+}
+
+@media only screen and (min-width: 769px) and (max-width:992px){
+
+    .navLinks{
+        min-width: fit-content;
+    }
+    .aboutMe {
+        flex-direction: column;
+        padding: 20px;
+        height: auto;
+    }
+
+    .aboutMeImg {
+        margin-bottom: -90px;
+    }
+
+    .aboutMeContent .hello{
+        margin-top: 90px;
+    }
+
+    .aboutMeContent .name{
+        margin: 20px 0px 20px 0px;
+    }
+
+    .aboutMeContent .work{
+        margin-bottom: 20px;
+        font-size: 45px;
+    }
+
+    .skills{
+        height: auto;
+    }
+
+    .skillsInfo{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .skillsGrid{
+        grid-template-columns: repeat(2,1fr);
+        margin-top: -21px;
+        font-size: 21px;
+        gap: 1rem;
+    }
+
+    .skillsGrid p{
+        font-size: 21px;
+    }
+
+    .titlePortfolio{
+        font-size: 65px;
+        letter-spacing: 5px;
+    }
+
+    .gallery{
+        grid-template-columns: repeat(2,1fr);
+        gap: 30px;
+    }
+
+    .card .imgBox img{
+        height: 330px;
+        width: 330px;
+        border-radius: 50%;
+        margin: 0px auto;
+    }
+
+    .card .imgBox #borderRadius1{
+        border-radius: 50%;
+    }
+
+    .card .imgBox #borderRadius2{
+        border-radius: 50%;
+    }
+
+    .card .imgBox #borderRadius3{
+        border-radius: 50%;
+    }
+
+    .card .imgBox #borderRadius4{
+        border-radius: 50%;
+    }
+
+    .categoriesGallery {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 15px;
+        min-width: 700px;
+    }    
+
+    .cardInner{
+        margin: 0px auto;
+    }
+
+    .categoriesCard{
+        height: 350px;
+    }
+
+    .cardFront img, #borderRadiusS, #borderRadiusD{
+        border-radius: 50%;
+    }
+    
+    .cardInner{
+        margin: 0px auto;
+    }
+
+    .cardFront, .cardBack{
+        height: 330px;
+        width: 330px;
+    }
+
+
+    .contactTitle{
+        font-size: 65px;
+        letter-spacing: 5px;
+    }
+
+    .contactContent button{
+        margin: 0px auto;
+    }
+
+    .contactContent .mailContact{
+        margin: 70px 0px 70px 0px;
+    }
+
+    .footerContent a{
+        font-size: 16px;
+        letter-spacing: 7px;
+    }
+
+}
+
+@media only screen and (min-width: 993px) and (max-width:1440px){
+    .aboutMe {
+        padding: 20px;
+    }
+
+    .aboutMeContent .work{
+        font-size: 35px;
+    }
+
+    .skills{
+        height: auto;
+    }
+
+    .skillsInfo{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .titleSkills{
+        letter-spacing: 20px;
+        font-size: 65px;
+    }
+
+    .skillsGrid{
+        grid-template-columns: repeat(2,1fr);
+        margin-top: -21px;
+        font-size: 31px;
+        gap: 1rem;
+    }
+    
+    .skillsGrid h2{
+        font-size: 31px;
+    }
+
+    .skillsGrid p{
+        font-size: 21px;
+    }
+
+    .titlePortfolio{
+        font-size: 65px;
+        letter-spacing: 20px;
+    }
+
+    .gallery{
+        grid-template-columns: repeat(2,1fr);
+        gap: 30px;
+    }
+
+    .card .imgBox img{
+        height: 420px;
+        width: 420px;
+        border-radius: 50%;
+        margin: 0px auto;
+    }
+
+    .card .imgBox #borderRadius1{
+        border-radius: 50%;
+    }
+
+    .card .imgBox #borderRadius2{
+        border-radius: 50%;
+    }
+
+    .card .imgBox #borderRadius3{
+        border-radius: 50%;
+    }
+
+    .card .imgBox #borderRadius4{
+        border-radius: 50%;
+    }
+
+    .contactTitle{
+        font-size: 65px;
+        letter-spacing: 5px;
+    }
+
+    .contactContent button{
+        margin: 0px auto;
+    }
+
+    .contactContent .mailContact{
+        margin: 70px 0px 70px 0px;
+    }
+
+    .footerContent a{
+        font-size: 16px;
+        letter-spacing: 7px;
+    }
+
+}
+
+@media (max-width: 993px) {
+
+    header{
+        background: rgb(5, 25, 55, 0);
+    }
+
+    header #hamburgerMenu{
+        display: block;
+        width: 70px;
+        height: 70px;
+    }
+
+    .navLinks{
+        position: absolute;
+        top: 100%;
+        margin-top: 0.5rem;
+        width: 150%;
+        padding: 1rem;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background: rgb(5, 25, 55, 0.6);
+        border-radius: 3rem;
+        display: none;
+    }
+
+    .navLinks li{
+        margin-top: 1.5rem;
+        padding: 1rem;
+    }
+
+    .navLinks.active{
+        display: block;
+    }
+
+    header{
+        padding: 1rem 1rem;
+        gap: 1rem;
+    }
+
+    header .logo{
+        display: none;
+    }
+
+}
+
+
+
